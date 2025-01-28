@@ -12,7 +12,14 @@ void get_memory_usage(int *total_mem, int *used_mem) {
 }
 
 float get_cpu_temperature() {
-    return 45.0;
+    FILE *fp = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
+    if (!fp) return -1.0;
+
+    int temp;
+    fscanf(fp, "%d", &temp);
+    fclose(fp);
+
+    return temp / 1000.0;
 }
 
 void draw_header() {
