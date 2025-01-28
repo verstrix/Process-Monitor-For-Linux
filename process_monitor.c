@@ -49,7 +49,7 @@ void draw_processes() {
         char user[32] = "user";
         float cpu = (float)(i * 10);
         float mem = (float)(i * 5);
-        char command[128] = "dummy_app";
+        char command[128] = "err";
 
         attron(COLOR_PAIR(2));
         mvprintw(row, 2, "%d", pid);
