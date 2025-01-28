@@ -3,8 +3,7 @@ A simple and lightweight process monitoring tool for Linux. It lets you view and
 
 A simple and lightweight process monitoring tool for Linux. It lets you view and track system processes in real-time with resource usage stats like CPU and memory.
 
-How to Run
-Compile it with:
+To run it compile it with:
 ```
 gcc -o process_monitor process_monitor.c -lncurses  
 ```
